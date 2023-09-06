@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct NumberView: View {
+struct CounterView: View {
 
     @State private var numberOfRows = 0
     private let rowLabel = "Rows"
+    private let resetButtonLabel = "Reset"
     
     var body: some View {
         VStack {
@@ -56,16 +57,16 @@ struct NumberView: View {
                     Button(action: {
                         numberOfRows = 0
                     }, label: {
-                        Text(Strings.Text.reset)
+                        Text(resetButtonLabel)
                             .font(.system(size: 18))
                             .padding()
                             .foregroundColor(.white)
 
                     })
                     .frame(height: 30, alignment: .center)
-                    .background(Color.red)
+                    .background(Color.pink)
                     .cornerRadius(10)
-                    .shadow(color: .black, radius: 2, x: 2, y: 0)
+                    .shadow(color: .black, radius: 1, x: 2, y: 1)
 //                    .buttonStyle(RoundedRectangle(cornerSize: 5))
                 }
                 .frame(width: 200, height: 200, alignment: .center)
@@ -77,6 +78,6 @@ struct NumberView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        NumberView()
+        CounterView()
     }
 }
