@@ -13,4 +13,8 @@ struct Strings {
         static let minusCircleFill = NSLocalizedString("minus.circle.fill", comment: "")
         static let plusCircleFill =  NSLocalizedString("plus.circle.fill", comment: "")
     }
+    
+    struct Text {
+        static let reset = NSLocalizedString("Reset", comment: "")
+    }
 }

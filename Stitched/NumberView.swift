@@ -56,7 +56,7 @@ struct NumberView: View {
                     Button(action: {
                         numberOfRows = 0
                     }, label: {
-                        Text("Reset")
+                        Text(Strings.Text.reset)
                             .font(.system(size: 18))
                             .padding()
                             .foregroundColor(.white)
